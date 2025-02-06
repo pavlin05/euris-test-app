@@ -1,11 +1,18 @@
 import { store } from './store'
 import { Provider } from 'react-redux'
+import Header from './components/Header'
+import Home from './pages/Home'
 
 function App() {
-  console.log(import.meta.env.VITE_EURIS_API_URL)
   return (
     <Provider store={store}>
-      <div>Hello World</div>
+      <Header />
+      <main>
+        <Home />
+      </main>
+      <footer>
+        <p>Footer</p>
+      </footer>
     </Provider>
   )
 }
