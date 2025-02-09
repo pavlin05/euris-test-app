@@ -1,23 +1,20 @@
 import React, { useState } from 'react'
 import { useGetProductsQuery } from '../../features/product/query.ts'
-
 import { viewLayoutSelector } from '../../features/ui/selector.ts'
 import { useAppSelector } from '../../hooks/useRedux.ts'
 import CardProduct from './components/CardProduct.tsx'
 import ModalProduct from './components/ModalProduct.tsx'
 import HeaderProduct from './components/HeaderProduct.tsx'
+import GraphCategoryProduct from './components/GraphCategoryProduct.tsx'
 
 const Dashboard: React.FC = () => {
   const viewLayout = useAppSelector(viewLayoutSelector)
+  const [isModalOpen, setIsModalOpen] = useState(false)
   const { data: products = [] } = useGetProductsQuery()
 
-  const [isModalOpen, setIsModalOpen] = useState(false)
-  const handleModalOpen = () => {
-    setIsModalOpen(true)
-  }
   return (
-    <div className="flex flex-col gap-5">
-      <HeaderProduct handleModalOpen={handleModalOpen} />
+    <div className="flex flex-col gap-10">
+      <HeaderProduct handleModalOpen={() => setIsModalOpen(true)} />
       <div
         className={
           viewLayout === 'grid'
@@ -31,6 +28,7 @@ const Dashboard: React.FC = () => {
           </React.Fragment>
         ))}
       </div>
+      <GraphCategoryProduct />
       <ModalProduct
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}

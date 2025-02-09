@@ -31,9 +31,9 @@ export const MoonIcon: React.FC<{ className?: string }> = ({ className }) => (
     viewBox="0 0 24 24"
   >
     <path
-      fill-rule="evenodd"
+      fillRule="evenodd"
       d="M11.675 2.015a.998.998 0 0 0-.403.011C6.09 2.4 2 6.722 2 12c0 5.523 4.477 10 10 10 4.356 0 8.058-2.784 9.43-6.667a1 1 0 0 0-1.02-1.33c-.08.006-.105.005-.127.005h-.001l-.028-.002A5.227 5.227 0 0 0 20 14a8 8 0 0 1-8-8c0-.952.121-1.752.404-2.558a.996.996 0 0 0 .096-.428V3a1 1 0 0 0-.825-.985Z"
-      clip-rule="evenodd"
+      clipRule="evenodd"
     />
   </svg>
 )
@@ -49,9 +49,9 @@ export const SunIcon: React.FC<{ className?: string }> = ({ className }) => (
     viewBox="0 0 24 24"
   >
     <path
-      fill-rule="evenodd"
+      fillRule="evenodd"
       d="M13 3a1 1 0 1 0-2 0v2a1 1 0 1 0 2 0V3ZM6.343 4.929A1 1 0 0 0 4.93 6.343l1.414 1.414a1 1 0 0 0 1.414-1.414L6.343 4.929Zm12.728 1.414a1 1 0 0 0-1.414-1.414l-1.414 1.414a1 1 0 0 0 1.414 1.414l1.414-1.414ZM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm-9 4a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2H3Zm16 0a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2h-2ZM7.757 17.657a1 1 0 1 0-1.414-1.414l-1.414 1.414a1 1 0 1 0 1.414 1.414l1.414-1.414Zm9.9-1.414a1 1 0 0 0-1.414 1.414l1.414 1.414a1 1 0 0 0 1.414-1.414l-1.414-1.414ZM13 19a1 1 0 1 0-2 0v2a1 1 0 1 0 2 0v-2Z"
-      clip-rule="evenodd"
+      clipRule="evenodd"
     />
   </svg>
 )
@@ -67,9 +67,9 @@ export const GridIcon: React.FC<{ className?: string }> = ({ className }) => (
     viewBox="0 0 24 24"
   >
     <path
-      fill-rule="evenodd"
+      fillRule="evenodd"
       d="M4.857 3A1.857 1.857 0 0 0 3 4.857v4.286C3 10.169 3.831 11 4.857 11h4.286A1.857 1.857 0 0 0 11 9.143V4.857A1.857 1.857 0 0 0 9.143 3H4.857Zm10 0A1.857 1.857 0 0 0 13 4.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 21 9.143V4.857A1.857 1.857 0 0 0 19.143 3h-4.286Zm-10 10A1.857 1.857 0 0 0 3 14.857v4.286C3 20.169 3.831 21 4.857 21h4.286A1.857 1.857 0 0 0 11 19.143v-4.286A1.857 1.857 0 0 0 9.143 13H4.857Zm10 0A1.857 1.857 0 0 0 13 14.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 21 19.143v-4.286A1.857 1.857 0 0 0 19.143 13h-4.286Z"
-      clip-rule="evenodd"
+      clipRule="evenodd"
     />
   </svg>
 )
@@ -131,6 +131,31 @@ export const CloseIcon: React.FC<{ className?: string }> = ({ className }) => (
       strokeLinejoin="round"
       strokeWidth="2"
       d="M6 18 17.94 6M18 18 6.06 6"
+    />
+  </svg>
+)
+
+export const SpinnerIcon: React.FC<{ className?: string }> = ({
+  className,
+}) => (
+  <svg
+    className={`${className} animate-spin h-6 w-6`}
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+  >
+    <circle
+      className="opacity-25"
+      cx="12"
+      cy="12"
+      r="10"
+      stroke="currentColor"
+      strokeWidth="4"
+    />
+    <path
+      className="opacity-75"
+      fill="currentColor"
+      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
     />
   </svg>
 )

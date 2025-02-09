@@ -1,20 +1,14 @@
-import React from 'react'
-import {
-  Product,
-  useDeleteProductMutation,
-} from '../../../features/product/query.ts'
+import React, { useState } from 'react'
+import { Product } from '../../../features/product/query.ts'
 import { useAppSelector } from '../../../hooks/useRedux.ts'
 import { viewLayoutSelector } from '../../../features/ui/selector.ts'
 import Button from '../../../components/Ui/Button'
 import { TrashBinIcon } from '../../../components/Ui/Icons/Icons.tsx'
+import ModalDeleteProduct from './ModalDeleteProduct.tsx'
 
 const CardProduct: React.FC<{ product: Product }> = ({ product }) => {
-  const [deleteProduct] = useDeleteProductMutation()
+  const [isOpen, setIsOpen] = useState<boolean>(false)
   const viewLayout = useAppSelector(viewLayoutSelector)
-
-  const handleDeleteProduct = async () => {
-    await deleteProduct(product.id!)
-  }
 
   return (
     <div className="p-5 text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 shadow-md rounded-lg border border-gray-200 dark:border-gray-700">
@@ -47,12 +41,17 @@ const CardProduct: React.FC<{ product: Product }> = ({ product }) => {
           </div>
         </div>
         <div className="flex items-center">
-          <Button className="bg-red-600" onClick={handleDeleteProduct}>
+          <Button className="bg-red-600" onClick={() => setIsOpen(true)}>
             <TrashBinIcon className="text-white" />
             Elimina
           </Button>
         </div>
       </div>
+      <ModalDeleteProduct
+        isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
+        product={product}
+      />
     </div>
   )
 }

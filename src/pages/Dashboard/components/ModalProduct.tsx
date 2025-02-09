@@ -4,6 +4,7 @@ import TextInput from '../../../components/Ui/TextInput'
 import Button from '../../../components/Ui/Button'
 import { Controller, SubmitHandler, useForm } from 'react-hook-form'
 import { useAddProductMutation } from '../../../features/product/query.ts'
+import { SpinnerIcon } from '../../../components/Ui/Icons/Icons.tsx'
 
 interface ModalProps {
   isOpen: boolean
@@ -20,7 +21,7 @@ interface FormValues {
 }
 
 const ModalProduct: React.FC<ModalProps> = ({ isOpen, onClose }) => {
-  const [addProduct] = useAddProductMutation()
+  const [addProduct, { isLoading }] = useAddProductMutation()
 
   const { control, handleSubmit, reset } = useForm<FormValues>({
     defaultValues: {
@@ -32,19 +33,19 @@ const ModalProduct: React.FC<ModalProps> = ({ isOpen, onClose }) => {
       reviews: '',
     },
   })
-  const onSubmit: SubmitHandler<FormValues> = (data) => {
+  const onSubmit: SubmitHandler<FormValues> = async (data) => {
     const { title, description, price, category, employee, reviews } = data
-    addProduct({
+    await addProduct({
       title,
       description,
       price: Number(price.replace(',', '.')),
       category,
       employee,
       reviews: [reviews],
-    }).then(() => {
-      reset()
-      onClose()
     })
+
+    reset()
+    onClose()
   }
 
   return (
@@ -155,7 +156,10 @@ const ModalProduct: React.FC<ModalProps> = ({ isOpen, onClose }) => {
             />
           </div>
           <div>
-            <Button type="submit">Aggiungi</Button>
+            <Button type="submit">
+              {isLoading && <SpinnerIcon />}
+              Aggiungi
+            </Button>
           </div>
         </div>
       </form>

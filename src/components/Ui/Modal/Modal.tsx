@@ -17,7 +17,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children }) => {
         <div className="p-10 bg-white border-2 border-gray-300 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
           <div className="flex justify-between mb-4 rounded-t items-center">
             <div className="text-gray-700 dark:text-gray-300">
-              <h3 className="font-semibold ">{title}</h3>
+              <h3 className="font-bold text-xl">{title}</h3>
             </div>
             <div>
               <Button className="bg-transparent" onClick={onClose}>
