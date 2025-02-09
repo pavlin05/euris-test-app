@@ -1,18 +1,17 @@
 import { store } from './store'
 import { Provider } from 'react-redux'
 import Header from './components/Header'
-import Home from './pages/Home'
+import Dashboard from './pages/Dashboard'
+import Footer from './components/Footer'
 
 function App() {
   return (
     <Provider store={store}>
       <Header />
-      <main>
-        <Home />
+      <main className="lg:p-12 p-5 overflow-auto bg-gray-100 dark:bg-gray-700 ">
+        <Dashboard />
       </main>
-      <footer>
-        <p>Footer</p>
-      </footer>
+      <Footer />
     </Provider>
   )
 }

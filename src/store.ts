@@ -1,8 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { eurisApi } from './features/eurisApi.ts'
+import uiSliceReducer from './features/ui/slice'
 
 export const store = configureStore({
   reducer: {
+    ui: uiSliceReducer,
     [eurisApi.reducerPath]: eurisApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>

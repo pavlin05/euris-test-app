@@ -1,6 +1,6 @@
 import { eurisApi } from '../eurisApi.ts'
 
-interface Product {
+export interface Product {
   id?: string
   title: string
   category: string
