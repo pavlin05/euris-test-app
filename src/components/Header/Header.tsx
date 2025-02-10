@@ -10,11 +10,9 @@ const Header: React.FC = () => {
       <nav className="bg-white border border-gray-300 p-5 dark:bg-gray-800 dark:border-gray-700">
         <div className="flex items-center justify-between">
           <div>
-            <a href="https://flowbite.com" className="flex items-center">
-              <span className="text-xl font-bold text-gray-700 dark:text-gray-300">
-                Euris Test
-              </span>
-            </a>
+            <span className="text-xl font-bold text-gray-700 dark:text-gray-300">
+              Euris Test
+            </span>
           </div>
           <div>
             <Button

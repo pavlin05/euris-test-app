@@ -24,15 +24,15 @@ const CardProduct: React.FC<{ product: Product }> = ({ product }) => {
           className={`flex ${viewLayout === 'grid' ? 'flex-col' : 'flex-col md:gap-5 md:flex-row'}`}
         >
           <p className="font-bold text-lg">
-            Categoria:{' '}
+            Category:{' '}
             <span className="font-normal text-sm">{product.category}</span>
           </p>
           <p className="font-bold text-lg">
-            Dipendente:{' '}
+            Employee:{' '}
             <span className="font-normal text-sm">{product.employee}</span>
           </p>
           <div>
-            <h4 className="font-bold text-lg">Recensioni:</h4>
+            <h4 className="font-bold text-lg">Reviews:</h4>
             <ul className="list-disc list-inside text-sm">
               {product.reviews.map((review, index) => (
                 <li key={index}>{review}</li>
@@ -43,7 +43,7 @@ const CardProduct: React.FC<{ product: Product }> = ({ product }) => {
         <div className="flex items-center">
           <Button className="bg-red-600" onClick={() => setIsOpen(true)}>
             <TrashBinIcon className="text-white" />
-            Elimina
+            Delete
           </Button>
         </div>
       </div>

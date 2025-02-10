@@ -14,9 +14,9 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children }) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50 bg-transparent bg-opacity-50">
       <div className="p-2 md:p-5 w-full max-w-xl h-full md:h-auto">
-        <div className="p-10 bg-white border-2 border-gray-300 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-          <div className="flex justify-between mb-4 rounded-t items-center">
-            <div className="text-gray-700 dark:text-gray-300">
+        <div className="p-2 bg-white border-2 border-gray-300 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <div className="flex justify-between rounded-t items-center">
+            <div className="px-5 text-gray-700 dark:text-gray-300">
               <h3 className="font-bold text-xl">{title}</h3>
             </div>
             <div>
@@ -25,7 +25,8 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children }) => {
               </Button>
             </div>
           </div>
-          <div className="text-gray-700 dark:text-gray-300">{children}</div>
+          <div className="h-0.5  bg-gray-300 dark:bg-gray-700" />
+          <div className="p-5 text-gray-700 dark:text-gray-300">{children}</div>
         </div>
       </div>
     </div>

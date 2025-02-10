@@ -54,7 +54,7 @@ const ModalProduct: React.FC<ModalProps> = ({ isOpen, onClose }) => {
         <div className="flex flex-col gap-4">
           <div>
             <label className="block mb-2 text-sm text-gray-700 dark:text-gray-300">
-              Titolo
+              Title
             </label>
             <Controller
               name="title"
@@ -63,7 +63,7 @@ const ModalProduct: React.FC<ModalProps> = ({ isOpen, onClose }) => {
               render={({ field }) => (
                 <TextInput
                   {...field}
-                  placeholder="Titolo"
+                  placeholder="Title"
                   type="text"
                   required
                 />
@@ -72,7 +72,7 @@ const ModalProduct: React.FC<ModalProps> = ({ isOpen, onClose }) => {
           </div>
           <div>
             <label className="block mb-2 text-sm text-gray-700 dark:text-gray-300">
-              Descrizione
+              Description
             </label>
             <Controller
               name="description"
@@ -80,7 +80,7 @@ const ModalProduct: React.FC<ModalProps> = ({ isOpen, onClose }) => {
               render={({ field }) => (
                 <TextInput
                   {...field}
-                  placeholder="Descrizione"
+                  placeholder="Description"
                   type="text"
                   required
                 />
@@ -89,7 +89,7 @@ const ModalProduct: React.FC<ModalProps> = ({ isOpen, onClose }) => {
           </div>
           <div>
             <label className="block mb-2 text-sm text-gray-700 dark:text-gray-300">
-              Prezzo
+              Price
             </label>
             <Controller
               name="price"
@@ -97,7 +97,7 @@ const ModalProduct: React.FC<ModalProps> = ({ isOpen, onClose }) => {
               render={({ field }) => (
                 <TextInput
                   {...field}
-                  placeholder="Prezzo"
+                  placeholder="Price"
                   type="number"
                   required
                 />
@@ -106,7 +106,7 @@ const ModalProduct: React.FC<ModalProps> = ({ isOpen, onClose }) => {
           </div>
           <div>
             <label className="block mb-2 text-sm text-gray-700 dark:text-gray-300">
-              Categoria
+              Category
             </label>
             <Controller
               name="category"
@@ -114,7 +114,7 @@ const ModalProduct: React.FC<ModalProps> = ({ isOpen, onClose }) => {
               render={({ field }) => (
                 <TextInput
                   {...field}
-                  placeholder="Categoria"
+                  placeholder="Category"
                   type="text"
                   required
                 />
@@ -123,7 +123,7 @@ const ModalProduct: React.FC<ModalProps> = ({ isOpen, onClose }) => {
           </div>
           <div>
             <label className="block mb-2 text-sm text-gray-700 dark:text-gray-300">
-              Dipendente
+              Employee
             </label>
             <Controller
               name="employee"
@@ -131,7 +131,7 @@ const ModalProduct: React.FC<ModalProps> = ({ isOpen, onClose }) => {
               render={({ field }) => (
                 <TextInput
                   {...field}
-                  placeholder="Dipendente"
+                  placeholder="Employee"
                   type="text"
                   required
                 />
@@ -140,7 +140,7 @@ const ModalProduct: React.FC<ModalProps> = ({ isOpen, onClose }) => {
           </div>
           <div>
             <label className="block mb-2 text-sm text-gray-700 dark:text-gray-300">
-              Recensione
+              Review
             </label>
             <Controller
               name="reviews"
@@ -148,7 +148,7 @@ const ModalProduct: React.FC<ModalProps> = ({ isOpen, onClose }) => {
               render={({ field }) => (
                 <TextInput
                   {...field}
-                  placeholder="Recensione"
+                  placeholder="Review"
                   type="text"
                   required
                 />
@@ -158,7 +158,7 @@ const ModalProduct: React.FC<ModalProps> = ({ isOpen, onClose }) => {
           <div>
             <Button type="submit">
               {isLoading && <SpinnerIcon />}
-              Aggiungi
+              Send
             </Button>
           </div>
         </div>

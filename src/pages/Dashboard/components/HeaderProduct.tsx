@@ -35,7 +35,7 @@ const HeaderProduct: React.FC<{ handleModalOpen: () => void }> = ({
       </Button>
       <Button onClick={handleModalOpen}>
         <PlusIcon className={'text-white'} />
-        Nuovo Prodotto
+        Add new product
       </Button>
     </div>
   )

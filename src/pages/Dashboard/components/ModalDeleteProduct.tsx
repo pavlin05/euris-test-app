@@ -24,12 +24,14 @@ const ModalDeleteProduct: React.FC<ModalProps> = ({
     onClose()
   }
   return (
-    <Modal title="Elimina prodotto" isOpen={isOpen} onClose={onClose}>
+    <Modal title="Delete product" isOpen={isOpen} onClose={onClose}>
       <div className="flex flex-col gap-4">
-        <div>Sei sicuro di voler eliminare il prodotto {product.title}?</div>
-        <div className="flex justify-end">
+        <div>
+          Are you sure you want to delete the product? "{product.title}"?
+        </div>
+        <div>
           <Button onClick={handleDeleteProduct}>
-            {isLoading && <SpinnerIcon />} Invia
+            {isLoading && <SpinnerIcon />} Send
           </Button>
         </div>
       </div>
