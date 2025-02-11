@@ -18,7 +18,7 @@ Euris Test App is a React application designed for managing products with featur
 - **Node.js** version 20 or higher
 
 1, Clone the repository
-- `git clone https://github.com/pavlin05/euris-test-app.git` [Link](https://github.com/pavlin05/euris-test-app/tree/devel)
+- `git clone https://github.com/pavlin05/euris-test-app.git`
 - `cd euris-test-app`
 
 2, Install dependencies
