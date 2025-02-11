@@ -9,7 +9,7 @@ import GraphCategoryProduct from './components/GraphCategoryProduct.tsx'
 
 const Dashboard: React.FC = () => {
   const viewLayout = useAppSelector(viewLayoutSelector)
-  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
   const { data: products = [] } = useGetProductsQuery()
 
   return (
