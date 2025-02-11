@@ -13,6 +13,10 @@ Euris Test App is a React application designed for managing products with featur
 - **Responsive UI** - Optimized for desktop & mobile
 
 ## Installation
+
+### Prerequisites
+- **Node.js** version 20 or higher
+
 1, Clone the repository
 - `git clone https://github.com/pavlin05/euris-test-app.git` [Link](https://github.com/pavlin05/euris-test-app/tree/devel)
 - `cd euris-test-app`
@@ -23,6 +27,8 @@ Euris Test App is a React application designed for managing products with featur
 3, Run the application
 - `npm run dev`
 
+The app will be available at http://localhost:5173.
+
 ## Tech Stack
 - **React** + Vite + TypeScript
 - **Redux Toolkit** (state management)
@@ -30,6 +36,7 @@ Euris Test App is a React application designed for managing products with featur
 
 ## Libraries
 - [**React**](https://reactjs.org/) - A JavaScript library for building user interfaces
+- [**TypeScript**](https://www.typescriptlang.org/) - A typed superset of JavaScript that compiles to plain JavaScript
 - [**Redux**](https://redux.js.org/) - A manageable state container for JavaScript apps
 - [**Redux Toolkit**](https://redux-toolkit.js.org/) - The official, opinionated, batteries-included toolset for efficient Redux development
 - [**Tailwind CSS**](https://tailwindcss.com/) - CSS framework for rapidly building custom designs

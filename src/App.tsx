@@ -4,7 +4,7 @@ import Header from './components/Header'
 import Dashboard from './pages/Dashboard'
 import Footer from './components/Footer'
 
-function App() {
+const App = () => {
   return (
     <Provider store={store}>
       <Header />
