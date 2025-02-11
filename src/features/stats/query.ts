@@ -1,8 +1,8 @@
 import { eurisApi } from '../eurisApi.ts'
 
-interface Stats {
+export interface Stats {
   numberOfProducts: number
-  category: 'string'
+  category: string
 }
 
 export const extendedStatsApi = eurisApi.injectEndpoints({

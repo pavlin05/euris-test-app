@@ -16,7 +16,7 @@ const CardProduct: React.FC<{ product: Product }> = ({ product }) => {
         className={`flex gap-5 ${viewLayout === 'grid' ? 'flex-col' : 'flex-col md:flex-row md:justify-between'}`}
       >
         <div>
-          <h2 className="font-bold text-4xl">{product.title}</h2>
+          <h2 className="font-bold text-2xl">{product.title}</h2>
           <p className="text-lg">{product.description}</p>
           <p className="text-lg">{product.price}€</p>
         </div>

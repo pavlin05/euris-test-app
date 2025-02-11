@@ -16,6 +16,7 @@ const Dashboard: React.FC = () => {
     <div className="flex flex-col gap-10">
       <HeaderProduct handleModalOpen={() => setIsModalOpen(true)} />
       <div
+        data-testid={'products-layout'}
         className={
           viewLayout === 'grid'
             ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'
@@ -23,7 +24,7 @@ const Dashboard: React.FC = () => {
         }
       >
         {products.map((product) => (
-          <React.Fragment key={product.id}>
+          <React.Fragment key={`product-${product.id}`}>
             <CardProduct product={product} />
           </React.Fragment>
         ))}

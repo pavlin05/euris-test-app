@@ -49,7 +49,7 @@ const ModalProduct: React.FC<ModalProps> = ({ isOpen, onClose }) => {
   }
 
   return (
-    <Modal title="Aggiungi un prodotto" isOpen={isOpen} onClose={onClose}>
+    <Modal title="Add new product" isOpen={isOpen} onClose={onClose}>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="flex flex-col gap-4">
           <div>

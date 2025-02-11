@@ -23,7 +23,7 @@ const HeaderProduct: React.FC<{ handleModalOpen: () => void }> = ({
   }
   return (
     <div className="flex justify-between items-center">
-      <h1 className="text-gray-700 dark:text-gray-300 text-xl font-bold">
+      <h1 className="text-gray-700 dark:text-gray-300 text-4xl font-bold">
         {storeName}
       </h1>
       <Button className={'hidden md:block'} onClick={handleViewLayout}>

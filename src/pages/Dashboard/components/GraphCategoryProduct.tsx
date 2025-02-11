@@ -31,9 +31,11 @@ const GraphCategoryProduct: React.FC = () => {
       },
     ],
   }
-  console.log('statsData', statsData)
   return (
-    <div className={'flex justify-center max-h-140 w-full'}>
+    <div
+      className={'flex justify-center max-h-140 w-full'}
+      data-testid="graph-category-product"
+    >
       <PolarArea data={statsData} />
     </div>
   )
