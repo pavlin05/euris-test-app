@@ -10,7 +10,7 @@ export interface Product {
   reviews: string[]
 }
 
-export const extendedOrderApi = eurisApi.injectEndpoints({
+export const extendedProductApi = eurisApi.injectEndpoints({
   endpoints: (build) => ({
     getProducts: build.query<Product[], void>({
       providesTags: ['Products'],
@@ -58,4 +58,4 @@ export const {
   useAddProductMutation,
   useDeleteProductMutation,
   useGetProductQuery,
-} = extendedOrderApi
+} = extendedProductApi
