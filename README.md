@@ -1,50 +1,44 @@
-# React + TypeScript + Vite
+# Euris Test App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Euris Test App is a React application designed for managing products with features such as data visualization, CRUD operations, and state management using Redux.
 
-Currently, two official plugins are available:
+## Documentation
+- [Euris Test App Documentation](https://techops-eurisit-fe-test.azurewebsites.net/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- **Dashboard** - Displays shop name and product list from API  
+- **CRUD Operations** - Add, delete, and view products
+- **Layout Toggle** - Switch between panel and grid views  
+- **Chart.js Integration** - Visualizes products per category (PolarArea chart)  
+- **Responsive UI** - Optimized for desktop & mobile
 
-## Expanding the ESLint configuration
+## Installation
+1, Clone the repository
+- `git clone https://github.com/pavlin05/euris-test-app.git` [link](https://github.com/pavlin05/euris-test-app/tree/devel)
+- `cd euris-test-app`
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+2, Install dependencies
+- `npm install`
 
-- Configure the top-level `parserOptions` property like this:
+3, Run the application
+- `npm run dev`
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Tech Stack
+- **React** + Vite + TypeScript
+- **Redux Toolkit** (state management)
+- **Tailwind CSS**
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Libraries
+- [**React**](https://reactjs.org/) - A JavaScript library for building user interfaces
+- [**Redux**](https://redux.js.org/) - A manageable state container for JavaScript apps
+- [**Redux Toolkit**](https://redux-toolkit.js.org/) - The official, opinionated, batteries-included toolset for efficient Redux development
+- [**Tailwind CSS**](https://tailwindcss.com/) - CSS framework for rapidly building custom designs
+- [**Chart.js**](https://www.chartjs.org/) - A simple HTML5 Charts using the <canvas> tag
+- [**React Testing Library**](https://testing-library.com/docs/react-testing-library/intro/) - A testing library for React that encourages good testing practices
+- [**Vitest**](https://vitest.dev/) -  Blazing fast unit test framework for modern JavaScript and TypeScript
+- [**ESLint**](https://eslint.org/) - A pluggable and configurable linter tool for identifying and reporting on patterns in JavaScript.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Testing
+- **React Testing Library** - Testing library for React that encourages good testing practices
+- **Vitest** - Blazing fast unit test framework for modern JavaScript and TypeScript
+- `npm run test`
